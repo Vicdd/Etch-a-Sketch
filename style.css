@@ -1,6 +1,22 @@
+:root {
+  --gridSize: 16;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  grid-template-columns: repeat(var(--gridSize), 1fr);
+  grid-template-rows: repeat(var(--gridSize), 1fr);
+}
+
 .cell {
-  width: 20px;
-  height: 20px;
+  background-color: antiquewhite;
 }
 
 .cell:hover {
