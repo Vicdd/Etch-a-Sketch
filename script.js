@@ -18,7 +18,12 @@ function removeGrid() {
 createGrid(16);
 
 let button = document.querySelector("button").addEventListener('click', () => {
-    let gridSize = prompt("Insert new grid size value");
+    let gridSize;
+
+    do {
+        gridSize = prompt("Insert new grid size value (1-100)");
+    } while (gridSize < 1 || gridSize > 100);
+
     removeGrid();
     document.documentElement.style.setProperty('--gridSize', gridSize);
     createGrid(gridSize);
