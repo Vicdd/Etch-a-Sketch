@@ -22,6 +22,7 @@ let button = document.querySelector("button").addEventListener('click', () => {
 
     do {
         gridSize = prompt("Insert new grid size value (1-100)");
+        if (gridSize == null) return;
     } while (gridSize < 1 || gridSize > 100);
 
     removeGrid();
